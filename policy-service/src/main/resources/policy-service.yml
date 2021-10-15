@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: policy-service
+  sleuth:
+    sampler:
+      probability: 1.0
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: mongo
+      repositories:
+        enabled: true
+
+
+
