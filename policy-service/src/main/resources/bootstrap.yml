@@ -1,17 +1,23 @@
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: http://localhost:9091/eureka
+server:
+  port: 8081
 
 spring:
+  application:
+    name: policy-service
   cloud:
     config:
-      name: policy-service
+      name: policy-service-kube
       discovery:
         enabled: true
         service-id: configuration-server
       override-system-properties: false
       allow-override: true
       override-none: true
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://discov-svc.default.svc:9091/eureka

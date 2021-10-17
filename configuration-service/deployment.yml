@@ -6,7 +6,7 @@ metadata:
     app: spring
 spec:
   selector:
-    app: demo-kube-configuration
+    app: demo-kube-config
   ports:
     - port: 9090
       targetPort: 9090
@@ -19,17 +19,18 @@ metadata:
   labels:
     app: spring
 spec:
+  replicas: 2
   selector:
     matchLabels:
-      app: demo-kube-configuration
+      app: demo-kube-config
   template:
     metadata:
       labels:
-        app: demo-kube-configuration
+        app: demo-kube-config
     spec:
       containers:
         - name: configuration-service
-          image: chocogem/demo-kube-configuration:lastest
+          image: chocogem/demo-kube-config:lastest
           imagePullPolicy: Always
           ports:
             - containerPort: 9090

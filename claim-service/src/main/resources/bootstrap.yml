@@ -1,14 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: claim-service
+  cloud:
+    config:
+      name: claim-service-kube
+      discovery:
+        enabled: true
+        service-id: configuration-server
 
 eureka:
   instance:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://localhost:9091/eureka
-spring:
-  cloud:
-    config:
-      name: claim-service
-      discovery:
-        enabled: true
-        service-id: configuration-server
+      defaultZone: http://discov-svc.default.svc:9091/eureka
+
+
+
+
