@@ -1,0 +1,6 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://adminuser=:admintestpass=@mongodb/mongodb
+      repositories:
+        enabled: true

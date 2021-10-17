@@ -1,14 +1,21 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: customer-service
+  cloud:
+    config:
+      name: customer-service-kube
+      discovery:
+        enabled: true
+        service-id: configuration-server
+
+
 eureka:
   instance:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://localhost:9091/eureka
+      defaultZone: http://discov-svc.default.svc:9091/eureka
 
-spring:
-  cloud:
-    config:
-      name: customer-service
-      discovery:
-        enabled: true
-        service-id: configuration-server

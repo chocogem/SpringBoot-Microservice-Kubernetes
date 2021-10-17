@@ -1,0 +1,8 @@
+
+spring:
+  data:
+    mongodb:
+      #mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@mongodb/${MONGO_DATABASE}
+      uri: mongodb://adminuser=:admintestpass=@mongodb/mongodb
+      repositories:
+        enabled: true
