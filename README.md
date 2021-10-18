@@ -1,34 +1,56 @@
-# Microservice-SpringCloud-NetflixEureka
+# SpringBoot Microservice Kubernetes
 
-This project is example Microservice project use Netflix Eureka and Spring cloud config.
+This project is example Spring boot Microservice Project for deploy on Kubernetes.
 
-The project contains eureka-service , configuration-service,claim-service,policy-service,customer-service.
+The project contains deployment files of 
 
-[![Microservice-Example.png](https://i.postimg.cc/fRzSqdPS/Microservice-Example.png)](https://postimg.cc/SJPKJnkm)
+-eureka-service
 
-                                       Service Relation
- 
+-configuration-service
+
+-claim-service
+
+-policy-service
+
+-customer-service  
+
+-mongoDB
 
 
 
+# Getting Started 
+
+How to test project.
+
+1.Download Docker desktop https://www.docker.com/products/docker-desktop and Install it.
+
+2.Enable Kubernetes on Docker desktop(Can use other).
+
+3.Build Image and push to Image Registry use docker command on Dockerfile.yml(I used Docker Hub https://hub.docker.com/).
+
+Example.
+
+#build image
+docker build -t chocogem/demo-kube-eureka:0.1 .
+
+#push image
+docker push chocogem/demo-kube-eureka:0.
 
 
-# Getting Started
+4.Deploy service to kubernetes use kubectl command on deployment.yml
 
-1.You need to install MongoDB also can use MongoDB on Docker.
+Example.
 
-2.Move service cloud config .yml files to yours repo .
+#deploy
 
-- claim-service.yml
+kubectl apply -f deployment.yml 
 
-- policy-service.yml
+kubectl apply -f mongodb-deployment.yml
 
-- claim-service.yml
+#delete deployment
 
-(in this example project setting on file:///${user.home}/config-repo)
+kubectl delete -f deployment.yml
 
-3.Start eureka-service , configuration-service ,claim-service ,policy-service,customer-service
- 
 
 
 ## Built With
@@ -40,6 +62,9 @@ The project contains eureka-service , configuration-service,claim-service,policy
 * MongoDb
 * Eureka
 * Spring cloud
+* Docker
+* Kubernetes
+
 
 ## Authors
 
