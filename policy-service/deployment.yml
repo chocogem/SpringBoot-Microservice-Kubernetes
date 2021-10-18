@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
         - name: policy-service
-          image: chocogem/demo-kube-policy:lastest
+          image: chocogem/demo-kube-policy:0.1
           imagePullPolicy: Always
           ports:
             - containerPort: 8081

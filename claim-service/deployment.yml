@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
         - name: claim-service
-          image: chocogem/demo-kube-claim:lastest
+          image: chocogem/demo-kube-claim:0.1
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

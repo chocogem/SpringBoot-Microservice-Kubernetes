@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
         - name: customer-service
-          image: chocogem/demo-kube-customer:lastest
+          image: chocogem/demo-kube-customer:0.1
           imagePullPolicy: Always
           ports:
             - containerPort: 8082

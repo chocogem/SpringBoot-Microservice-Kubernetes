@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
         - name: discovery
-          image: chocogem/demo-kube-eureka:lastest
+          image: chocogem/demo-kube-eureka:0.1
           imagePullPolicy: Always
           ports:
             - containerPort: 9091
