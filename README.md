@@ -14,13 +14,15 @@ The project contains deployment files of
 
 -customer-service  
 
+-gateway
+
 -mongoDB
 
 
 
 # Getting Started 
 
-How to test project.
+How to run project.
 
 1.Download Docker desktop https://www.docker.com/products/docker-desktop and Install it.
 
