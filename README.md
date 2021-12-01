@@ -32,10 +32,12 @@ How to run project.
 
 Example.
 
-#build image
+# build image
+
 docker build -t chocogem/demo-kube-eureka:0.1 .
 
-#push image
+# push image
+
 docker push chocogem/demo-kube-eureka:0.
 
 
@@ -43,13 +45,13 @@ docker push chocogem/demo-kube-eureka:0.
 
 Example.
 
-#deploy
+# deploy
 
 kubectl apply -f deployment.yml 
 
 kubectl apply -f mongodb-deployment.yml
 
-#delete deployment
+# delete deployment
 
 kubectl delete -f deployment.yml
 
