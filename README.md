@@ -34,11 +34,11 @@ Example.
 
 # build image
 
-docker build -t chocogem/demo-kube-eureka:0.1 .
+docker build -t chocogem/demo-kube-eureka:0.1 
 
 # push image
 
-docker push chocogem/demo-kube-eureka:0.
+docker push chocogem/demo-kube-eureka:0.1
 
 
 4.Deploy service to kubernetes use kubectl command on deployment.yml
