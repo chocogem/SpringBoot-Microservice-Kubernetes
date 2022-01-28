@@ -32,14 +32,18 @@ How to run project.
 
 Example.
 
-# Login to DockerHub 
-(Need to register http://www.dockerhub.com/)
-Example.
-docker login --username=yourhubusername --email=youremail@company.com
 
 # build image
 
 docker build -t chocogem/demo-kube-eureka:0.1 
+
+# Login to DockerHub 
+
+(Need to register http://www.dockerhub.com/)
+
+Example.
+
+docker login --username=yourhubusername --email=youremail@company.com
 
 # push image
 
